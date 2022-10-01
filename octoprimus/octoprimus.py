@@ -35,10 +35,23 @@ def get_primes(limit):
     return primes
 
 
-primes = get_primes(100000)
+primes = get_primes(200000)
+
 primes = np.array(primes)
+primes_5000 = primes[primes < 5000]
+primes_20000 = primes[primes < 20000]
+primes_50000 = primes[primes < 50000]
 
-plt.scatter(primes * np.cos(primes), primes * np.sin(primes), s=0.1, c='b')    
+figure, axis = plt.subplots(2, 2, figsize=(12, 12))
 
-plt.gcf().set_size_inches(12, 12)
+axis[0, 0].scatter(primes_5000 * np.cos(primes_5000), primes_5000 * np.sin(primes_5000), s=0.1, c='b')  
+axis[0, 1].scatter(primes_20000 * np.cos(primes_20000), primes_20000 * np.sin(primes_20000), s=0.1, c='b')    
+axis[1, 0].scatter(primes_50000 * np.cos(primes_50000), primes_50000 * np.sin(primes_50000), s=0.1, c='b')    
+axis[1, 1].scatter(primes * np.cos(primes), primes * np.sin(primes), s=0.03, c='b')    
+
+axis[0, 0].locator_params(nbins=3)
+axis[0, 1].locator_params(nbins=3)
+axis[1, 0].locator_params(nbins=3)
+axis[1, 1].locator_params(nbins=3)
+
 plt.show()
