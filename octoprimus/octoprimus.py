@@ -29,7 +29,7 @@ def get_primes(limit):
             continue
         primes.extend([number])
 
-        print(f"{number/limit*100:06.3f}%")
+        print(f"{number / limit * 100:06.3f}%")
         sys.stdout.write("\033[F")
 
     return primes
@@ -45,9 +45,9 @@ primes_50000 = primes[primes < 50000]
 figure, axis = plt.subplots(2, 2, figsize=(12, 12))
 
 axis[0, 0].scatter(primes_5000 * np.cos(primes_5000), primes_5000 * np.sin(primes_5000), s=0.1, c='b')  
-axis[0, 1].scatter(primes_20000 * np.cos(primes_20000), primes_20000 * np.sin(primes_20000), s=0.1, c='b')    
-axis[1, 0].scatter(primes_50000 * np.cos(primes_50000), primes_50000 * np.sin(primes_50000), s=0.1, c='b')    
-axis[1, 1].scatter(primes * np.cos(primes), primes * np.sin(primes), s=0.03, c='b')    
+axis[0, 1].scatter(primes_20000 * np.cos(primes_20000), primes_20000 * np.sin(primes_20000), s=0.1, c='m')    
+axis[1, 0].scatter(primes_50000 * np.cos(primes_50000), primes_50000 * np.sin(primes_50000), s=0.1, c='g')    
+axis[1, 1].scatter(primes * np.cos(primes), primes * np.sin(primes), s=0.03, c='r')    
 
 axis[0, 0].locator_params(nbins=3)
 axis[0, 1].locator_params(nbins=3)
