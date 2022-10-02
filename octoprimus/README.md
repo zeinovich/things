@@ -4,4 +4,4 @@ spirals that on a bigger scale transform into thicker spirals which then transfr
 
 Thx 3Blue1Brown for an idea!
 
-![image](https://user-images.githubusercontent.com/114425094/193406530-cc5a892a-a4ee-4aa3-950a-9fa22da08b83.png)
+![image](https://user-images.githubusercontent.com/114425094/193461873-8c6338a2-5c66-44b6-a682-44298eedce11.png)
